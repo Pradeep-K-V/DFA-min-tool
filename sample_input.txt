@@ -1,0 +1,18 @@
+A,a->B
+A,b->F
+B,a->G
+B,b->C
+C,a->A
+C,b->C
+D,a->C
+D,b->G
+E,a->H
+E,b->F
+F,a->C
+F,b->G
+G,a->G
+G,b->E
+H,a->G
+H,b->C
+Final: C
+Start: A
