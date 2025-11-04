@@ -17,7 +17,7 @@ function minimizeDFA() {
     }
 
     // Parse transitions like: A,0->B
-    const match = line.match(/^([A-Za-z]),([01])->([A-Za-z])$/);
+    const match = line.match(/^([A-Za-z]),([ab])->([A-Za-z])$/);
     if (match) {
       const [_, state, symbol, nextState] = match;
       if (!dfa[state]) dfa[state] = {};
@@ -26,7 +26,7 @@ function minimizeDFA() {
   }
 
   const states = Object.keys(dfa);
-  const alphabet = ["0", "1"];
+  const alphabet = ["a", "b"];
 
   // Initial partition
   let P = [finalStates, new Set(states.filter(s => !finalStates.has(s)))];
